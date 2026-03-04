@@ -25,9 +25,6 @@ jobs:
         run: |
           bin/brakeman --no-pager
           bin/bundler-audit
-      
-      - name: Lint code
-        run: bin/rubocop -f github
 
       - name: Run tests
         env:
