@@ -18,6 +18,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Make scripts executable
+        run: chmod +x bin/*
+
       - name: Run tests
         env:
           RAILS_ENV: test
