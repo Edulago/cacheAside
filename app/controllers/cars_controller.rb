@@ -47,7 +47,7 @@ class CarsController < ApplicationController
     Rails.cache.delete("car:#{params[:id]}")
     Rails.cache.delete("car:index")
     @car.destroy!
-    render json: { message: "Car deleted successfully" }
+    head :no_content
   end
 
   private
