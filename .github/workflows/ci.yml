@@ -18,6 +18,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Make bin scripts executable
+        run: chmod +x bin/*
+
       - name: Check security vulnerabilities
         run: |
           bin/brakeman --no-pager
