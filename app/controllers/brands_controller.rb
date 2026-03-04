@@ -47,7 +47,7 @@ class BrandsController < ApplicationController
     Rails.cache.delete("brands:#{params[:id]}")
     Rails.cache.delete("brands:index")
     @brand.destroy!
-    render json: { message: "Brand deleted" }
+    head :no_content
   end
 
   private

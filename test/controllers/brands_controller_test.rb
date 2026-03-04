@@ -12,7 +12,7 @@ class BrandsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create brand" do
     assert_difference("Brand.count") do
-      post brands_url, params: { brand: { country: @brand.country, name: @brand.name } }, as: :json
+      post brands_url, params: { brand: { country: @brand.country, name: "NewBrand" } }, as: :json
     end
 
     assert_response :created
